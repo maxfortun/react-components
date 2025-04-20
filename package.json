@@ -1,0 +1,26 @@
+{
+  "name": "@maxfortun/react-components",
+  "version": "0.0.1",
+  "description": "Max Fortun's React Components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxfortun/react-components.git"
+  },
+  "author": "Max Fortun <max@maxf.net>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint index.js lib/",
+    "release": "git tag | grep -q $npm_package_version && echo \"Release $npm_package_version already exists.\" || ( ( git diff-index --quiet HEAD || git commit -a -m \"Releasing $npm_package_version\" ) && git push && git tag $npm_package_version && git push --tags;)"
+  },
+  "dependencies": {
+    "@mui/icons-material": "^6.4.4",
+    "@mui/material": "^6.4.3",
+    "debug": "^4.3.4",
+    "re-resizable": "^6.11.2",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  }
+}
